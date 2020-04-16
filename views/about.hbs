@@ -27,10 +27,23 @@
    <li class="nav-item"> 
     <a class="nav-link text-light" href="../cancel"> Cancelled Trip </a> 
    </li>
+   <li class="nav-item"> 
+    <a class="nav-link text-light" href="../update"> Updated Trip </a> 
+   </li>
  </ul>
  </nav> <br> 
-<div class="container-fluid"> 
- <div class="container"> <br> <br> <br>
+
+
+<div class="container"> 
+ <br> <br> <br>
+  <div class="row">
+   <div class="col-sm-12">
+     <center> {{>header}}</center>
+   </div>
+  </div>
+  </div> <br>
+
+<div class="container"> 
  <div class="row"> 
   <div align="center" class="col-sm-4 bg-warning">
     <h5> <b>Friends Package </b> 
@@ -46,9 +59,8 @@
     <img src="https://img.icons8.com/cotton/64/000000/family.png" height=50px width=50px></h5>
   </div>
  </div>
-</div>
 
-<div class="container">
+
  <div class="row">
   <div class="col-sm-4 bg-danger">
     <img class="img-responsive" src="https://images.unsplash.com/photo-1558900493-3b6cc10d7aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80">
@@ -61,14 +73,11 @@
   <div class="col-sm-4 bg-danger">
     <img class="img-responsive" src="https://images.unsplash.com/photo-1521817186572-dfb33b8fa7f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
   </div> 
-
-</div>
-</div>
+</div>   <br>
 
 <div class="container">
-<div class="row">
-  <div class="col-sm-4 bg-warning"><br>
-    <center>
+<div class="row"> 
+  <div class="col-sm-12 bg-warning"><br>
       <h4> Friends Trip Details </h4>
     <table class="table table-sm table-bordered table-dark">
       <tr align="center">
@@ -87,14 +96,14 @@
         <th><br> Sightseeing </th>
          <td> SUV Car </td>
         <th> Total Package Cost  </th>
-        <td><br> Rs.80,500 </td>
+        <td> Rs.80,500 </td>
       </tr>
     </table>
-  </center>
   </div>
-
-  <div class="col-sm-4 bg-dark"> <br>
-    <h4 align="center" class="text-light"> Honeymoon Trip Details </h4>
+</div>
+ <div class="row">
+ <div class="col-sm-12 bg-dark"> <br>
+   <h4 align="center" class="text-light"> Honeymoon Trip Details </h4>
      <table class="table table-sm table-bordered table-danger">
       <tr align="center">
         <th> No of Person's</th>
@@ -112,12 +121,13 @@
         <th><br> Sightseeing </th>
          <td> Sedan Car </td>
         <th> Total Package Cost  </th>
-        <td><br> Rs.60,300 </td>
+        <td> Rs.60,300 </td>
       </tr>
-    </table>
+    </table> 
   </div>
-
-  <div class="col-sm-4 bg-success"> <br>
+</div>  <br> <br>
+   <div class="row">
+   <div class="col-sm-12 bg-info"> <br>
      <h4 align="center" class="text-light"> Family Trip Details </h4>
     <table class="table table-sm table-bordered table-primary">
       <tr align="center">
@@ -136,14 +146,27 @@
         <th><br> Sightseeing </th>
          <td> SUV Car </td>
         <th> Total Package Cost  </th>
-        <td><br> Rs.65,600 </td>
+        <td> Rs.65,600 </td>
       </tr>
     </table>
   </div>
+</div>
+  </div>
+</div>
+
+</div>
+<br> <br>
+
+<div class="container">
+  <div class="row">
+   <div class="col-sm-12">
+     <center> {{>footer}}</center>
+   </div>
+  </div>
+</div>
+  
 
 
-</div>
-</div>
-</div>
+
 </body>
 </html>

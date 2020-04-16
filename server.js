@@ -2,7 +2,6 @@ var expr=require('express');
 const hbs=require('hbs');
 const _=require('lodash');
 const fs=require('fs');
-
 var app=expr();
 
 const port=process.env.PORT || 3000;
@@ -10,13 +9,14 @@ const port=process.env.PORT || 3000;
 hbs.registerPartials(__dirname+'/views/partials')   
 
 app.use((req,res,next)=>{  
-    console.log("Running"+new Date().getDate());
+    console.log("Sudhir Project is Running"+new Date().getDate());
     next();
-})
+});
 
+//Mam used middleware function in below and above statement block
 app.use((req,res,next)=>{   
     var log=`${req.method} ${req.url}`;
-    console.log(log);
+    console.log("Project is Running ( Method | URL):",log);
     fs.appendFile('somefile.log',log+'\n',(err)=>{
         if(err)
         {
@@ -24,7 +24,7 @@ app.use((req,res,next)=>{
         }
     });
     next();
-})
+}) 
 
 
 app.get('/',(req,res)=>{
@@ -51,6 +51,10 @@ app.get('/about',(req,res) => {
 
 app.get('/cancel',(req,res) => {
   res.render('cancel.hbs');
+});
+
+app.get('/update',(req,res) => {
+  res.render('updation.hbs');
 });
 
 app.get('*',(req,res)=>{
